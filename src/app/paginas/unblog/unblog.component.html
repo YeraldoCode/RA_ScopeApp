@@ -1,1 +1,6 @@
-<p>unblog works!</p>
+<div class="container" *ngIf="post">
+    <h2>{{ post.titulo }}</h2>
+    <p><strong>Descripción:</strong> {{ post.descripcion }}</p>
+    <a routerLink="/productos">Volver a Productos</a>
+  </div>
+   

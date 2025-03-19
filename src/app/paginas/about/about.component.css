@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #6200ea;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* About Us Section */
+  .about-us {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .about-us h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .about-us .subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  /* Founders Section */
+  .founders {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .founder-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+  }
+  
+  .founder-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+  }
+  
+  .founder-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .founder-card .role {
+    font-size: 16px;
+    color: #6200ea;
+    margin-bottom: 10px;
+  }
+  
+  .founder-card .bio {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .social-links a {
+    color: #6200ea;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  /* Mission Section */
+  .mission {
+    margin-top: 60px;
+  }
+  
+  .mission h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .mission p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Values Section */
+  .values {
+    margin-top: 60px;
+    text-align: left;
+  }
+  
+  .values h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .values ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .values ul li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .values ul li strong {
+    color: #333;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }

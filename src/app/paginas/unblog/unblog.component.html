@@ -1,6 +1,13 @@
-<div class="container" *ngIf="post">
-  <h2>{{ post.titulo }}</h2>
-  <p><strong>Descripción:</strong> {{ post.descripcion }}</p>
-  <a routerLink="/productos">Volver a Productos</a>
-</div>
- 
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  @for(Blog of unblog;track $index){
+  <div class="col">
+      <div class="card h-100">
+      <img src="" class="card-img-top" alt="...">
+      <h5 class="card-title">{{Blog.titulo}}</h5>
+      <p class="card-text">{{Blog.descripcion}}</p>
+      <p class="card-img-top">{{Blog.image}}</p> <!--despues de instalar el bootstrap nos vamos a angular.json y colocamos en el style y scrip las dos ligas -->
+     <button><a routerLink="/blog" routerLinkActive="active" >Regresar</a></button>
+      </div>
+    </div>
+  }
+  </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { UnblogService } from '../../service/unblog.service';
+import { BlogService } from '../../service/blog.service';
 
 @Component({
   selector: 'app-unblog',
@@ -9,24 +9,28 @@ import { UnblogService } from '../../service/unblog.service';
   templateUrl: './unblog.component.html',
   styleUrls: ['./unblog.component.css']
 })
-export class UnblogComponent implements OnInit {
-  post: any = null; // Variable donde se guardará el post
+export class UnblogComponent{
 
-  constructor(
-    private route: ActivatedRoute, // Para obtener el parámetro de la URL
-    private _srvUnblog: UnblogService // Servicio para obtener el post
-  ) {}
-
+  json : any = [];
+  unblog: any =[];
+ 
+  constructor (private route : ActivatedRoute,
+              private _serviceUnBlog:BlogService){} //copiamos y pegamos el servicio de servicios de productos ´q esta adentro
   ngOnInit(): void {
-    // Obtener el ID del post desde la URL
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-
-    if (id) {
-      this._srvUnblog.getUnblogById(id).subscribe((response) => {
-        if (response.result.post) {
-          this.post = response.result.post.find((p: any) => p.idPost === id);
+      this.route.params.subscribe(params=> {
+        const Id_blog = params['id']; //se define la variable de id_producto que tendra el parametro como valo id...estara relacionado con rutas para constante
+      this._serviceUnBlog.getBlog(Id_blog).subscribe ( //un get de servicios
+        (Blog) => {
+      this.json = Blog;
+      this.unblog = this.json['result'];
+      console.log(this.unblog);
+ 
         }
-      });
-    }
+      )
+      }
+ 
+      )
   }
+  
 }
+

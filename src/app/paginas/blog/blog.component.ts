@@ -12,23 +12,29 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-  blog: any[] = []; // Variable que almacenará los blog
-
-  constructor(private _srvBlog: BlogService) { }
-
-  ngOnInit(): void {
-    this._srvBlog.getBlogs().subscribe({
-      next: (response: any) => {  
-        if (response?.result?.post && Array.isArray(response.result.post)) { 
-          this.blog = response.result.post; // Acceder al array correcto
-        } else {
-          console.warn('API response does not contain a valid blog array:', response);
-          this.blog = []; // Evitar errores en la vista
-        }
-      },
-      error: (error: HttpErrorResponse) => {
-        console.error('Error fetching blog:', error);
-      }
-    });
+  
+  //agregamos variables para trael el resultado de  la consulta
+ 
+  json: any = {};
+  blogs:any = []; //aqui guardaremos la tablaproductos
+ 
+  constructor(private _srvBlogs:BlogService){
+ 
+  }
+ 
+  ngOnInit(): void { //dentro de este metodo colocamos la llamada que se hara para servicio
+  this._srvBlogs.getAllBlogs().subscribe(
+  (blogs) => {
+ 
+    this.json = blogs;
+    //console.log(this.json["status"]);   //console.log(blogs); el consol es para ver que si esta la informacion,si esta en el servicioy ya estando registrando se pueden pasar a comentarios
+    //console.log(this.json["total"]);
+    //console.log(this.json["result"]);
+    this.blogs =this.json["result"];
+    console.log(this.blogs);
+ 
+  }
+ 
+    );
   }
 }

@@ -7,12 +7,18 @@ import { Observable } from 'rxjs';
 })
 export class BlogService {
 
-  private apiUrl ='http://localhost/apiRA';
 
   constructor(private _http: HttpClient) { }
+ 
+  getAllBlogs(){
 
-  //metodo con tipo de retorno observable
-  getBlogs(): Observable<any>{
-    return this._http.get<any>(this.apiUrl);
+    return this._http.get(`http://apira.com/post`);
+
   }
+  getBlog(id: number) :Observable<any>{
+
+    return this._http.get(`http://apira.com/post?select=idPost,titulo,descripcion,image&where=idPost=`+ id);
+  }  
+
+
 }

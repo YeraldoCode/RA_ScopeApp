@@ -40,7 +40,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
     <div class="w3-container">
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        @for (blog of blog; track blog.idPost) {
+        @for (blog of blogs; track blog.idPost) {
           <div class="col">
             <div class="card">
               <img src="" class="card-img-top" alt="{{ blog.titulo }}">

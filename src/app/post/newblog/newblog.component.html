@@ -1,0 +1,18 @@
+<form #formBlog="ngForm" style="height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <!--<pre>
+        {{ formPostre.value | json }} para arreglar este error importar en el ts el form y el json-->
+    <!--</pre> quitamos el pre para que ya no muestre la consulta en la pagina y quitamos el pipi en el ts-->
+ 
+    <div class="form-container">
+        <div class="form-group">
+            <label for="titulo">Nombre:</label>
+            <input type="text" id="titulo" name="titulo" ngModel>
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+           <input type="text" id="descripcion" name="descripcion" ngModel>
+        </div>
+ 
+        <button type="button" (click)="guardar(formBlog.value)" class="submit-btn">Guardar</button>
+    </div>
+</form>

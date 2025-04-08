@@ -4,9 +4,30 @@ import { BlogComponent } from './paginas/blog/blog.component';
 import { SocialComponent } from './paginas/social/social.component';
 import { AboutComponent } from './paginas/about/about.component';
 import { UnblogComponent } from './paginas/unblog/unblog.component';
+import { NewblogComponent } from './post/newblog/newblog.component';
+import { LoginComponent } from './paginas/login/login.component';
+import { PrincipalComponent } from './paginas/principal/principal.component';
 
 
 export const routes: Routes = [
+    {
+        path: 'home',
+        redirectTo: 'home',
+        pathMatch: 'full'
+    },
+    {
+        path: 'login',
+        component: LoginComponent
+    },
+    {
+        path: 'principal',
+        component: PrincipalComponent
+    },
+    {
+        path: 'newblog',
+        component: NewblogComponent,
+        data: { title: 'New Blog' }
+    },
     {
         path: 'unblog/:id',
         component: UnblogComponent,

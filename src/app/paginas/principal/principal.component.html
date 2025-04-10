@@ -1,10 +1,23 @@
-<div>
-    <img src="{{perfil.picture}}" alt="Profile Picture">
-</div>
 
-<div>
-    <h5>HolA {{perfil.given_name}}</h5>
-</div>
+    <h1>Mi Perfil</h1>
+            <img src="{{perfil.picture}}" alt="Foto de perfil">
+            <form action="*" method="post" enctype="multipart/form-data">
+                <label for="imagen">Subir Imagen:</label>
+                <input type="file" name="imagen" id="imagen" required>
+                <button type="submit">Subir Imagen</button>
+            </form>
+
+            <h2>{{perfil.given_name}}</h2>
+            <p>Email: {{perfil.email}}</p>
+            <p>Teléfono: {{perfil.telefono}}</p>
+            <img src="{{perfil.picture}}" alt="Foto de perfil">
+            <form action="*" method="post" enctype="multipart/form-data">
+                <label for="imagen">Subir Imagen:</label>
+                <input type="file" name="imagen" id="imagen" required>
+                <button type="submit">Subir Imagen</button>
+            </form>
+            <h2>{{perfil.given_name}}
+
 <div>
     <button (click)="cerrarSesion()">LOGOUT</button>
 </div>

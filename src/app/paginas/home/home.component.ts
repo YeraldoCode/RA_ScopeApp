@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  currentYear: number = new Date().getFullYear();
+
 }

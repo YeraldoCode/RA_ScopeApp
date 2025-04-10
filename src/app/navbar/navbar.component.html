@@ -1,16 +1,25 @@
-<div class="w3-top">
-    <div class="w3-row w3-padding w3-black">
-      <div class="w3-col s3">
-        <a routerLink="/" class="w3-button w3-block w3-black">HOME</a>
+ <!-- Header -->
+ <header class="sticky-top bg-white shadow-sm">
+  <div class="container py-3">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-globe text-purple fs-4"></i>
+        <button routerLink="/home"><span class="fs-4 fw-bold text-purple">Scope Inc.</span></button>
       </div>
-      <div class="w3-col s3">
-        <a routerLink="/about" class="w3-button w3-block w3-black">ABOUT</a>
-      </div>
-      <div class="w3-col s3">
-        <a routerLink="/blog" class="w3-button w3-block w3-black">BLOG</a>
-      </div>
-      <div class="w3-col s3">
-        <a routerLink="/login" class="w3-button w3-block w3-black">Login</a>
+      <nav class="d-none d-md-flex align-items-center">
+        <a href="#features" class="mx-3 text-decoration-none text-secondary hover-text-purple">Features</a>
+        <a href="#how-it-works" class="mx-3 text-decoration-none text-secondary hover-text-purple">How It Works</a>
+        <a routerLink="/blog" class="mx-3 text-decoration-none text-secondary hover-text-purple">Community</a>
+        <a href="#testimonials" class="mx-3 text-decoration-none text-secondary hover-text-purple">Testimonials</a>
+      </nav>
+      <div class="d-flex align-items-center gap-3">
+        <a routerLink="/login" class="d-none d-md-inline-block px-3 py-2 text-purple text-decoration-none fw-medium">
+          Log in
+        </a>
+        <a href="#" class="px-3 py-2 bg-purple text-white rounded hover-bg-purple-dark text-decoration-none fw-medium">
+          Sign Up Free
+        </a>
       </div>
     </div>
   </div>
+</header>
